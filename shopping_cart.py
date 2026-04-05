@@ -4,7 +4,7 @@ prices =[]
 total=0
 
 while True :
-    food_item = str(input("Please enter the food Item to buy:  (enter q to Quit)"))
+    food_item = str(input("Please enter the food Item to buy:  (enter q to Quit) "))
     if food_item.lower() == 'q' :
         break
     else:
@@ -21,9 +21,8 @@ while True :
 # print(prices)
 
 for f in food: 
-    print(f,end="")
+    print(f)
 
 for p in prices: 
-    # print(p,end= " ")
     total=total+p 
 print(f"Total bill of the order is {total} rupees")  
