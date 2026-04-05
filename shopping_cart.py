@@ -10,15 +10,13 @@ while True :
     else:
         food.append(food_item)
 
-    price= float(input("Please enter the price for the item in Rupees: (enter q to Quit) "))
-    if food_item.lower() == 'q'  : 
+    price= input("Please enter the price for the item in Rupees: (enter q to Quit) ")
+    if price.lower() == 'q'  : 
         break
     else:
+        price=float(price)
         prices.append(price)
     
-
-# print(food)
-# print(prices)
 
 for f in food: 
     print(f)
