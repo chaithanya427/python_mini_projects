@@ -1,0 +1,35 @@
+import random
+choose = ('rock','paper','scissors')
+playing= True
+def bot_random():
+    bot_guess=random.choice(choose)
+    return bot_guess
+while playing:
+    player=input(f"Your turn select one from :{choose} : ").lower()
+    bot_guess = bot_random()
+    if player in choose :
+        if player==bot_guess: 
+            print('its a tie')
+            print(f"Player : {player} ; Bot : {bot_guess} ")
+        elif ((player== 'rock' and bot_guess=='paper') or (player== 'paper' and bot_guess=='scissors') or (player== 'scissors' and bot_guess=='rock')):
+            print("Bot player Won")
+            print(f"Bot : {bot_guess}; Player : {player}")
+        else:
+            print("You Won")
+            print(f"Player : {player} ; Bot : {bot_guess} ")
+        playing= False
+    else:
+        print("Please choose valid input !")
+    if not playing:
+        play_again=input("Would you like to play (Y/N): ")
+        if play_again.upper()== 'Y':
+            playing=True
+        else:
+            print("Thank You for playing")
+    
+
+
+
+
+
+
